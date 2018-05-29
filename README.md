@@ -66,7 +66,28 @@ Criar o ponteiro para o elmenento <div> definido no template HTML - vínculo fei
 
 ### Passo 1:
     
-    Referenciar o arquivo javascript no arquivo index.html do projeto
+Referenciar o arquivo javascript no arquivo index.html do projeto
+
+Exemplo já mostrado anteriormente, observe a linha:
+
+    <head>
+
+        ...
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        ...
+
+    </head>
+
+A linha acima referencia no html um arquivo javascript publicado em uma url externa na internet. 
+
+Para adicionar um arquivo javascript local, o procedimento é o mesmo, alterando apenas a origem do arquivo ou adicionando-o no arquivo '.angular-cli.json' para o webpack compilar no arquivo final.
+    
+    ...
+    "scripts": [
+        "local-do-arquivo/markerclusterer.js"
+    ],
+    ...
+
 
 ### Passo 2:
     
@@ -76,6 +97,8 @@ Criar o ponteiro para o elmenento <div> definido no template HTML - vínculo fei
     import { } from '@types/googlemaps';
 
     declare var MarkerClusterer: any;
+
+**Atenção à linha acima: 'declare var MarkerClusterer: any;'**
 
 E agora é só divertir usando os componentes do Google MarkerCLusterer no seu projeto....
 
