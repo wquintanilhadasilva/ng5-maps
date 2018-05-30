@@ -119,6 +119,6 @@ E agora é só divertir usando os componentes do Google MarkerCLusterer no seu p
       {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
     );
 
-## Live Demos
-
+## [Live Demos](https://plnkr.co/edit/T1gh2Dx3vwMmOmHEL9qW?p=preview)
+Acesse o link [https://plnkr.co/edit/T1gh2Dx3vwMmOmHEL9qW?p=preview](https://plnkr.co/edit/T1gh2Dx3vwMmOmHEL9qW?p=preview) para ver o resultado
 [![Marker Clusterer Screenshot](https://googlemaps.github.io/js-marker-clusterer/screenshot.png)](https://googlemaps.github.io/js-marker-clusterer/docs/examples.html)
