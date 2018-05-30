@@ -1,4 +1,4 @@
-# Ng5Maps
+# Ng5Maps - Google Maps API & Google Maps MarkerClusterer
 
 Utilizando API nativa do Google Maps em projeto Angular 5.x
 
@@ -41,7 +41,7 @@ Importar os typings do google maps
 
     import { } from '@types/googlemaps';
 
-Criar o ponteiro para o elmenento <div> definido no template HTML - vínculo feito pela variável 'gmap' no html #gmap
+Criar, **NO ARQUIVO TypeScript do componente em que será utilizado o GoogleMaps**, o ponteiro para o elmenento <div> definido no template HTML - vínculo feito pela variável 'gmap' no html #gmap
     
     import { Component, OnInit, ViewChild } from '@angular/core';
 
@@ -65,7 +65,9 @@ Criar o ponteiro para o elmenento <div> definido no template HTML - vínculo fei
 ## Referenciar arquivo javascript (js) externo, sem os wrappers para typescript
 
 ### Passo 1:
-    
+
+#### Opção 1 - Utilizando a referência da URL pública onde está o javascript (neste caso, o CDN) 
+
 Referenciar o arquivo javascript no arquivo index.html do projeto
 
 Exemplo já mostrado anteriormente, observe a linha:
@@ -80,6 +82,8 @@ Exemplo já mostrado anteriormente, observe a linha:
 
 A linha acima referencia no html um arquivo javascript publicado em uma url externa na internet. 
 
+#### Opção 2 - Fazendo download do arquivo javascript para o projeto local, referenciando a este arquivo localmente
+
 Para adicionar um arquivo javascript local, o procedimento é o mesmo, alterando apenas a origem do arquivo ou adicionando-o no arquivo '.angular-cli.json' para o webpack compilar no arquivo final.
     
     ...
@@ -90,13 +94,22 @@ Para adicionar um arquivo javascript local, o procedimento é o mesmo, alterando
 
 
 ### Passo 2:
-    
-    Criar um wrapper para a classe a ser utilizada 'MarkerClusterer'
+
+Criar, **NO ARQUIVO TypeScript do componente em que será utilizado o MarkerClusterer**, o objeto que representa a Classe do GoogleMaps que deseja utilizar: '**_declare var MarkerClusterer: any_**' (variável global, fora da classe do componente que a utiliza);
+
+Criar um wrapper para a classe a ser utilizada 'MarkerClusterer'
 
     import { Component, OnInit, ViewChild } from '@angular/core';
     import { } from '@types/googlemaps';
 
     declare var MarkerClusterer: any;
+
+    @Component({
+        selector: 'app-root',
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.css']
+    })
+    export class AppComponent implements OnInit {
 
 **Atenção à linha acima: 'declare var MarkerClusterer: any;'**
 

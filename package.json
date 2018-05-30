@@ -10,6 +10,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "keywords": [
+    "markerclusterer",
+    "google maps",
+    "maps",
+    "google clusterer",
+    "maps api",
+    "api",
+    "using markerclusterer",
+    "markerclusterer not working"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
