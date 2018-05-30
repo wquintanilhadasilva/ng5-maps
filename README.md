@@ -41,7 +41,7 @@ Importar os typings do google maps
 
     import { } from '@types/googlemaps';
 
-Criar, **NO ARQUIVO TypeScript do componente em que será utilizado o GoogleMaps**, o ponteiro para o elmenento <div> definido no template HTML - vínculo feito pela variável 'gmap' no html #gmap
+Criar, **NO ARQUIVO TypeScript do componente em que será utilizado o GoogleMaps**, o ponteiro para o elemento <div> definido no template HTML - vínculo feito pela variável 'gmap' no html #gmap
     
     import { Component, OnInit, ViewChild } from '@angular/core';
 
@@ -118,3 +118,7 @@ E agora é só divertir usando os componentes do Google MarkerCLusterer no seu p
     const markerCluster = new MarkerClusterer(this.map, markers,
       {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
     );
+
+## Live Demos
+
+[![Marker Clusterer Screenshot](https://googlemaps.github.io/js-marker-clusterer/screenshot.png)](https://googlemaps.github.io/js-marker-clusterer/docs/examples.html)
